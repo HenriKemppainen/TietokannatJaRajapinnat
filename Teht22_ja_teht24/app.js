@@ -20,13 +20,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/user', userRouter);
 app.use('/login', loginRouter);
-app.use('/book', bookRouter);
+
 
 app.use(authenticateToken); //all routes below this line are protected
 
 
 
 app.use('/borrower', borrowerRouter);
+app.use('/book', bookRouter);
 
 
 
